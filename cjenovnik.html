@@ -3,131 +3,131 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>YUGO-Paket TV</title>
-  <link rel="stylesheet" href="style.css">
+  <title>Cijene i akcije - YUGO-Family TV</title>
+  <style>
+    body { margin:0; font-family:Arial,sans-serif; background:#fff; color:#333; }
+    header { background:#ff0000; color:#fff; padding:25px; text-align:center; }
+
+    /* Navigacija */
+    nav { background:#ff0000; display:flex; justify-content:center; flex-wrap:wrap; }
+    nav a { color:#fff; text-decoration:none; padding:12px 18px; display:block; transition:0.3s; }
+    nav a:hover { background:#fff; color:#ff0000; }
+
+    /* Hamburger meni */
+    .menu-toggle {
+      display:none;
+      flex-direction:column;
+      cursor:pointer;
+      padding:10px;
+      position:absolute;
+      top:20px;
+      right:20px;
+    }
+    .menu-toggle div {
+      width:30px;
+      height:4px;
+      background:#fff;
+      margin:5px 0;
+      transition:0.3s;
+    }
+
+    @media (max-width:768px) {
+      nav { display:none; flex-direction:column; text-align:center; }
+      nav.active { display:flex; }
+      .menu-toggle { display:flex; }
+    }
+
+    .container { max-width:1100px; margin:40px auto; padding:0 20px; }
+    h2 { text-align:center; color:#ff0000; margin-bottom:20px; }
+    .grid { display:grid; grid-template-columns:repeat(auto-fit, minmax(280px,1fr)); gap:20px; }
+    .card { background:#ff0000; color:#fff; border-radius:10px; padding:20px; text-align:center; transition:.3s; }
+    .card:hover { transform:translateY(-5px); background:#cc0000; }
+    .card h3 { margin-top:0; }
+    .card p { margin:10px 0; font-size:1.1em; }
+    .old-price { text-decoration:line-through; color:#ffe6e6; font-size:0.9em; }
+    .btn { display:inline-block; margin-top:12px; padding:10px 18px; background:#fff; color:#ff0000; text-decoration:none; border-radius:6px; font-weight:bold; transition:0.3s; }
+    .btn:hover { background:#ffe6e6; }
+
+    footer { background:#ff0000; color:#fff; text-align:center; padding:20px; margin-top:40px; }
+    footer a { color:#fff; text-decoration:none; font-weight:bold; }
+    footer a:hover { color:#ffe6e6; }
+  </style>
 </head>
 <body>
+  <header>
+    <h1>Cijene i akcije</h1>
+    <p>Najbolja IPTV ponuda za cijelu porodicu</p>
 
-<canvas id="tech-bg"></canvas>
+    <div class="menu-toggle" onclick="toggleMenu()">
+      <div></div>
+      <div></div>
+      <div></div>
+    </div>
+  </header>
 
-<header>
-  <h1>YUGO-Paket TV</h1>
-  <p>Vaša porodica, vaša televizija – najbolji IPTV servis</p>
-  <button class="menu-toggle" onclick="openNav()">☰</button>
-</header>
+  <nav id="navbar">
+    <a href="index.html">Početna</a>
+    <a href="cjenovnik.html">Cijene i akcije</a>
+    <a href="komentari.html">Komentari</a>
+    <a href="onama.html">O nama</a>
+    <a href="tim.html">Postani dio tima</a>
+    <a href="top15.html">Top 30</a>
+    <a href="kontakt.html">Kontakt</a>
+  </nav>
 
-<div id="myNav" class="overlay">
-  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
-  <a href="index.html">Početna</a>
-  <a href="cjenovnik.html">Cijene i akcije</a>
-  <a href="top15.html">Top 30</a>
-  <a href="komentari.html">Komentari</a>
-  <a href="tim.html">Postani dio tima</a>
-  <a href="onama.html">O nama</a>
-  <a href="kontakt.html">Kontakt</a>
-  <a href="placanje.html">Plaćanje</a>
-  <a href="kako-da-gledas.html">Kako da gledaš</a>
-  <a href="aplikacije.html">Aplikacije za korištenje</a>
-</div>
+  <div class="container">
+    <h2>Naši paketi</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Basic paket</h3>
+        <p>6.99€</p>
+        <p>750 kanala, 4.500 filmova, 500 serija</p>
+        <a class="btn" href="https://wa.me/491734802281">Kupi sada</a>
+      </div>
+      <div class="card">
+        <h3>Medium paket</h3>
+        <p>8.99€</p>
+        <p>1.120 kanala, 7.600 filmova, 650 serija</p>
+        <a class="btn" href="https://wa.me/491734802281">Kupi sada</a>
+      </div>
+      <div class="card">
+        <h3>Pro paket</h3>
+        <p>11.99€</p>
+        <p>2.100+ kanala, 45.000+ filmova, 1.350+ serija</p>
+        <a class="btn" href="https://wa.me/491734802281">Kupi sada</a>
+      </div>
+    </div>
 
-<section class="hero">
-  <h1>Dobrodošli u YUGO-Paket TV</h1>
-  <p>Već 9 godina pružamo vrhunsku IPTV uslugu bez prekida i trzanja – za Vas i Vašu porodicu.</p>
-</section>
+    <h2 style="margin-top:40px;">Akcije</h2>
+    <div class="grid">
+      <div class="card">
+        <h3>Probni test</h3>
+        <p>24h potpuno besplatno</p>
+        <a class="btn" href="https://wa.me/491734802281">Aktiviraj</a>
+      </div>
+      <div class="card">
+        <h3>12 + 12 mjeseci</h3>
+        <p><span class="old-price">180€</span> <strong>140€</strong></p>
+        <p>Ušteda 40€</p>
+        <a class="btn" href="https://wa.me/491734802281">Kupi sada</a>
+      </div>
+      <div class="card">
+        <h3>Porodični paket</h3>
+        <p>Gledanje na 2 uređaja istovremeno</p>
+        <a class="btn" href="https://wa.me/491734802281">Kupi sada</a>
+      </div>
+    </div>
+  </div>
 
-<section class="counters">
-  <div class="counter-box"><h2 class="counter" data-target="16000">0</h2><p>Zadovoljnih korisnika</p></div>
-  <div class="counter-box"><h2 class="counter" data-target="9">0</h2><p>Godina sa vama</p></div>
-  <div class="counter-box"><h2 class="counter" data-target="2100">0</h2><p>Live kanala</p></div>
-  <div class="counter-box"><h2 class="counter" data-target="75000">0</h2><p>Videoteka</p></div>
-</section>
+  <footer>
+    <p>&copy; 2025 YUGO-Family TV</p>
+    <p>Email: <a href="mailto:Kudelic_de@hotmail.com">Kudelic_de@hotmail.com</a> | WhatsApp: <a href="https://wa.me/491734802281">+49 173 4802281</a></p>
+  </footer>
 
-<section class="content">
-  <h2>Zašto odabrati YUGO-Paket TV?</h2>
-  <p>Naš IPTV servis nudi savršen spoj kvaliteta, stabilnosti i povoljne cijene. Bez ikakvih prekida i nepotrebnog opterećenja, uz servere i streamove najvišeg kvaliteta. Vaše zadovoljstvo nam je uvijek na prvom mjestu!</p>
-  <p>📌 Provjerite <a href="cjenovnik.html">pakete i akcije</a>, <a href="top15.html">Top 15 filmova i serija</a> ili <a href="komentari.html">komentare</a>.</p>
-</section>
-
-<section class="content">
-  <h2>Šta je Internet televizija (IPTV)?</h2>
-  <ul>
-    <li>Više hiljada TV kanala iz cijelog svijeta</li>
-    <li>Velika videoteka sa filmovima i serijama na zahtjev</li>
-    <li>Gledanje na Smart TV-u, mobitelu, tabletu, računaru ili TV box uređajima</li>
-    <li>Bez dodatnih antena, kablova ili komplikovanih instalacija</li>
-    <li>Povoljnija cijena u poređenju sa klasičnim operaterima</li>
-  </ul>
-</section>
-
-<footer>
-  <p>&copy; 2025 YUGO-Paket TV | Kontakt: <a href="https://wa.me/491734802281">WhatsApp</a> | Email: <a href="mailto:kudelic_de@hotmail.com">kudelic_de@hotmail.com</a></p>
-</footer>
-
-<script>
-function openNav(){ document.getElementById("myNav").style.width="100%"; }
-function closeNav(){ document.getElementById("myNav").style.width="0%"; }
-
-// Brojači
-const counters = document.querySelectorAll('.counter');
-counters.forEach(counter=>{
-  counter.innerText='0';
-  const updateCounter=()=>{
-    const target=+counter.getAttribute('data-target');
-    const current=+counter.innerText.replace(/\D/g,'');
-    const increment=target/200;
-    if(current<target){
-      counter.innerText=Math.ceil(current+increment).toLocaleString();
-      setTimeout(updateCounter,20);
-    } else {
-      counter.innerText=target>=1000?target.toLocaleString()+"+":target+"+";
+  <script>
+    function toggleMenu() {
+      document.getElementById("navbar").classList.toggle("active");
     }
-  };
-  updateCounter();
-});
-
-// Canvas i lebdeće ikonice
-const canvas=document.getElementById('tech-bg');
-const ctx=canvas.getContext('2d');
-let width=canvas.width=window.innerWidth;
-let height=canvas.height=window.innerHeight;
-
-window.addEventListener('resize',()=>{ width=canvas.width=window.innerWidth; height=canvas.height=window.innerHeight; });
-
-const particleCount=80;
-const particles=[];
-const icons=[];
-const iconUrls=['https://cdn-icons-png.flaticon.com/32/1087/1087863.png','https://cdn-icons-png.flaticon.com/32/4140/4140048.png','https://cdn-icons-png.flaticon.com/32/715/715676.png'];
-const iconImgs=iconUrls.map(src=>{ const i=new Image(); i.src=src; return i; });
-
-class Particle{ constructor(){ this.x=Math.random()*width; this.y=Math.random()*height; this.size=Math.random()*2+1; this.speedX=Math.random()*1-0.5; this.speedY=Math.random()*1-0.5; } update(){ this.x+=this.speedX; this.y+=this.speedY; if(this.x>width)this.x=0; if(this.x<0)this.x=width; if(this.y>height)this.y=0; if(this.y<0)this.y=height; } draw(){ ctx.fillStyle='rgba(255,0,0,0.7)'; ctx.beginPath(); ctx.arc(this.x,this.y,this.size,0,Math.PI*2); ctx.fill(); } }
-class Icon{ constructor(img){ this.img=img; this.x=Math.random()*width; this.y=Math.random()*height; this.size=32+Math.random()*16; this.speedX=Math.random()*1-0.5; this.speedY=Math.random()*1-0.5; } update(){ this.x+=this.speedX; this.y+=this.speedY; if(this.x>width)this.x=0; if(this.x<0)this.x=width; if(this.y>height)this.y=0; if(this.y<0)this.y=height; } draw(){ ctx.drawImage(this.img,this.x,this.y,this.size,this.size); } }
-
-for(let i=0;i<particleCount;i++)particles.push(new Particle());
-for(let i=0;i<20;i++)icons.push(new Icon(iconImgs[Math.floor(Math.random()*iconImgs.length)]));
-
-function animate(){ 
-  ctx.clearRect(0,0,width,height); 
-  particles.forEach(p=>{p.update();p.draw();}); 
-  for(let i=0;i<particles.length;i++){
-    for(let j=i+1;j<particles.length;j++){ 
-      let dx=particles[i].x-particles[j].x; 
-      let dy=particles[i].y-particles[j].y; 
-      let dist=Math.sqrt(dx*dx+dy*dy); 
-      if(dist<100){ 
-        ctx.strokeStyle='rgba(255,0,0,0.1)'; 
-        ctx.lineWidth=1; 
-        ctx.beginPath(); 
-        ctx.moveTo(particles[i].x,particles[i].y); 
-        ctx.lineTo(particles[j].x,particles[j].y); 
-        ctx.stroke(); 
-      }
-    }
-  } 
-  icons.forEach(ic=>{ic.update();ic.draw();}); 
-  requestAnimationFrame(animate);
-}
-animate();
-</script>
-
+  </script>
 </body>
 </html>
