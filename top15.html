@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Top 30 - YUGO-Family TV</title>
+  <style>
+    /* Reset i osnovni stilovi */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial,sans-serif; background:#8b0000; color:#fff; overflow-x:hidden; }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+      padding: 25px;
+      text-align:center;
+    }
+    h1 { font-size:2.2em; margin-bottom:10px; }
+    p { font-size:1.1em; }
+
+    /* Navigacija */
+    nav {
+      background:#ff0000;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      padding:12px 18px;
+      display:block;
+      transition:0.3s;
+    }
+    nav a:hover { background:#ffcccc; color:#8b0000; }
+
+    /* Hamburger dugme */
+    .menu-toggle { 
+      display:none; font-size:28px; background:none; border:none; color:#fff; cursor:pointer; padding:12px 18px; 
+    }
+    @media (max-width:768px) {
+      nav { display:none; flex-direction:column; text-align:center; }
+      nav.show { display:flex; }
+      .menu-toggle { display:block; background:#ff0000; width:100%; text-align:right; }
+    }
+
+    /* Container */
+    .container { max-width:1200px; margin:20px auto; padding:0 20px; }
+    h2 { text-align:center; color:#fff; margin:20px 0; }
+
+    /* Grid kartice */
+    .grid {
+      display:grid;
+      grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+      gap:20px;
+    }
+    .card {
+      background:#ffcc00;
+      color:#8b0000;
+      padding:20px;
+      border-radius:10px;
+      text-align:center;
+      font-weight:bold;
+      font-size:1.1em;
+      transition: transform 0.3s;
+    }
+    .card:hover { transform:translateY(-5px); }
+
+    /* Footer */
+    footer {
+      text-align:center;
+      padding:20px;
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+      margin-top:40px;
+    }
+    footer a { color:#ffcc00; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Top gledanih filmova i serija</h1>
+    <p>Najpopularniji sadržaji na YUGO-Family TV</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="mainMenu">
+    <a href="index.html">Početna</a>
+    <a href="cijene.html">Cijene i akcije</a>
+    <a href="komentari.html">Komentari</a>
+    <a href="onama.html">O nama</a>
+    <a href="tim.html">Postani dio tima</a>
+    <a href="top15.html">Top 30</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="placanje.html">Plaćanje</a>
+  </nav>
+
+  <div class="container">
+    <h2>🎬 Najgledaniji filmovi (Top 30)</h2>
+    <div class="grid">
+      <div class="card">1. The Godfather</div>
+      <div class="card">2. Inception</div>
+      <div class="card">3. Gladiator</div>
+      <div class="card">4. Pulp Fiction</div>
+      <div class="card">5. The Dark Knight</div>
+      <div class="card">6. Fight Club</div>
+      <div class="card">7. Forrest Gump</div>
+      <div class="card">8. Schindler’s List</div>
+      <div class="card">9. Titanic</div>
+      <div class="card">10. Braveheart</div>
+      <div class="card">11. The Shawshank Redemption</div>
+      <div class="card">12. Matrix</div>
+      <div class="card">13. Goodfellas</div>
+      <div class="card">14. Se7en</div>
+      <div class="card">15. Interstellar</div>
+      <div class="card">16. Saving Private Ryan</div>
+      <div class="card">17. Django Unchained</div>
+      <div class="card">18. Avengers: Endgame</div>
+      <div class="card">19. Avatar</div>
+      <div class="card">20. Joker</div>
+      <div class="card">21. Parasite</div>
+      <div class="card">22. The Pianist</div>
+      <div class="card">23. The Silence of the Lambs</div>
+      <div class="card">24. Rocky</div>
+      <div class="card">25. Casablanca</div>
+      <div class="card">26. Back to the Future</div>
+      <div class="card">27. The Departed</div>
+      <div class="card">28. Whiplash</div>
+      <div class="card">29. The Wolf of Wall Street</div>
+      <div class="card">30. Black Panther</div>
+    </div>
+
+    <h2>📺 Najgledanije serije (Top 10)</h2>
+    <div class="grid">
+      <div class="card">1. Game of Thrones</div>
+      <div class="card">2. Breaking Bad</div>
+      <div class="card">3. The Sopranos</div>
+      <div class="card">4. Stranger Things</div>
+      <div class="card">5. The Crown</div>
+      <div class="card">6. Friends</div>
+      <div class="card">7. The Office</div>
+      <div class="card">8. Chernobyl</div>
+      <div class="card">9. Vikings</div>
+      <div class="card">10. Money Heist</div>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 YUGO-Family TV | <a href="index.html">Nazad na početnu</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document
