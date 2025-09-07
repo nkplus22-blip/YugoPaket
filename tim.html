@@ -1,0 +1,141 @@
+<!DOCTYPE html>
+<html lang="bs">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Postani dio tima - YUGO-Family TV</title>
+  <style>
+    /* Reset i osnovni stilovi */
+    * { margin:0; padding:0; box-sizing:border-box; }
+    body { font-family: Arial,sans-serif; background:#8b0000; color:#fff; overflow-x:hidden; }
+
+    /* Header */
+    header {
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+      padding: 25px;
+      text-align:center;
+    }
+
+    h1 { font-size:2.2em; margin-bottom:10px; }
+    p { font-size:1.1em; line-height:1.8; }
+
+    /* Navigacija */
+    nav {
+      background:#ff0000;
+      display:flex;
+      justify-content:center;
+      flex-wrap:wrap;
+    }
+
+    nav a {
+      color:#fff;
+      text-decoration:none;
+      padding:12px 18px;
+      display:block;
+      transition:0.3s;
+    }
+
+    nav a:hover { background:#ffcccc; color:#8b0000; }
+
+    /* Hamburger dugme */
+    .menu-toggle { 
+      display:none; font-size:28px; background:none; border:none; color:#fff; cursor:pointer; padding:12px 18px; 
+    }
+
+    @media (max-width:768px) {
+      nav { display:none; flex-direction:column; text-align:center; }
+      nav.show { display:flex; }
+      .menu-toggle { display:block; background:#ff0000; width:100%; text-align:right; }
+    }
+
+    /* Container */
+    .container { max-width:1000px; margin:40px auto; padding:0 20px; }
+    h2 { text-align:center; color:#fff; margin-bottom:20px; }
+    h3 { color:#fff; margin-top:25px; margin-bottom:10px; }
+    p, ul { line-height:1.8; font-size:1.1em; color:#fff; }
+    ul li { margin-bottom:8px; list-style-type:"✔ "; list-style-position:inside; }
+
+    /* Call to Action */
+    .cta { text-align:center; margin:30px 0; }
+    .cta a {
+      background:#ffcc00;
+      color:#8b0000;
+      padding:12px 24px;
+      border-radius:6px;
+      text-decoration:none;
+      font-size:1.1em;
+      font-weight:bold;
+      transition:0.3s;
+      display:inline-block;
+      margin-top:10px;
+    }
+    .cta a:hover { background:#e6b800; }
+
+    /* Footer */
+    footer {
+      background: rgba(255,255,255,0.1);
+      color:#fff;
+      text-align:center;
+      padding:20px;
+      margin-top:40px;
+    }
+
+    footer a { color:#ffcc00; text-decoration:none; }
+  </style>
+</head>
+<body>
+  <header>
+    <h1>Postani dio našeg tima</h1>
+    <p>Započni saradnju sa nama i ostvari dodatnu zaradu</p>
+  </header>
+
+  <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+  <nav id="mainMenu">
+    <a href="index.html">Početna</a>
+    <a href="cijene.html">Cijene i akcije</a>
+    <a href="komentari.html">Komentari</a>
+    <a href="onama.html">O nama</a>
+    <a href="tim.html">Postani dio tima</a>
+    <a href="top15.html">Top 15</a>
+    <a href="kontakt.html">Kontakt</a>
+    <a href="placanje.html">Plaćanje</a>
+  </nav>
+
+  <div class="container">
+    <h2>Pridruži se našem timu</h2>
+    <p>Tražimo motivisane i odgovorne ljude koji žele postati dio našeg uspješnog tima. Ako voliš rad sa ljudima, komunikativan si i spreman za izazove – ovo je prava prilika za tebe!</p>
+
+    <h3>Šta nudimo?</h3>
+    <ul>
+      <li>Rad u dinamičnom i prijateljskom okruženju</li>
+      <li>Mogućnost dodatne zarade</li>
+      <li>Fleksibilno radno vrijeme</li>
+      <li>Obuku i podršku u radu</li>
+    </ul>
+
+    <h3>Šta očekujemo od tebe?</h3>
+    <ul>
+      <li>Da si odgovoran i pouzdan</li>
+      <li>Da imaš osnovne komunikacijske vještine</li>
+      <li>Da si spreman učiti i pratiti naše smjernice</li>
+    </ul>
+
+    <div class="cta">
+      <p>📩 Zainteresovan? Javi nam se i postani dio našeg uspješnog tima!</p>
+      <a href="https://wa.me/4915755749502">Pridruži se odmah</a>
+    </div>
+  </div>
+
+  <footer>
+    <p>&copy; 2025 YUGO-Family TV</p>
+    <p>Email: <a href="mailto:nkplus22@gmail.com">nkplus22@gmail.com</a> | WhatsApp: <a href="https://wa.me/4915755749502">+49 157 55749502</a></p>
+  </footer>
+
+  <script>
+    function toggleMenu() {
+      document.getElementById("mainMenu").classList.toggle("show");
+    }
+  </script>
+</body>
+</html>
